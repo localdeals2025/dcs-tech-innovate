@@ -22,17 +22,20 @@ const Header = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
-            <button onClick={() => scrollToSection('services')} className="text-foreground/80 hover:text-accent transition-colors">
+          <div className="hidden md:flex items-center gap-6">
+            <button onClick={() => scrollToSection('services')} className="text-foreground/80 hover:text-accent transition-colors text-sm font-medium">
               Services
             </button>
-            <button onClick={() => scrollToSection('why-us')} className="text-foreground/80 hover:text-accent transition-colors">
-              Why Us
+            <button onClick={() => scrollToSection('technologies')} className="text-foreground/80 hover:text-accent transition-colors text-sm font-medium">
+              Technologies
             </button>
-            <button onClick={() => scrollToSection('about')} className="text-foreground/80 hover:text-accent transition-colors">
+            <button onClick={() => scrollToSection('industries')} className="text-foreground/80 hover:text-accent transition-colors text-sm font-medium">
+              Industries
+            </button>
+            <button onClick={() => scrollToSection('team')} className="text-foreground/80 hover:text-accent transition-colors text-sm font-medium">
               About
             </button>
-            <button onClick={() => scrollToSection('contact')} className="text-foreground/80 hover:text-accent transition-colors">
+            <button onClick={() => scrollToSection('contact')} className="text-foreground/80 hover:text-accent transition-colors text-sm font-medium">
               Contact
             </button>
             <Button onClick={() => scrollToSection('contact')} className="bg-accent hover:bg-accent/90 text-accent-foreground">
@@ -55,11 +58,17 @@ const Header = () => {
             <button onClick={() => scrollToSection('services')} className="text-foreground/80 hover:text-accent transition-colors text-left">
               Services
             </button>
-            <button onClick={() => scrollToSection('why-us')} className="text-foreground/80 hover:text-accent transition-colors text-left">
-              Why Us
+            <button onClick={() => scrollToSection('technologies')} className="text-foreground/80 hover:text-accent transition-colors text-left">
+              Technologies
             </button>
-            <button onClick={() => scrollToSection('about')} className="text-foreground/80 hover:text-accent transition-colors text-left">
+            <button onClick={() => scrollToSection('industries')} className="text-foreground/80 hover:text-accent transition-colors text-left">
+              Industries
+            </button>
+            <button onClick={() => scrollToSection('team')} className="text-foreground/80 hover:text-accent transition-colors text-left">
               About
+            </button>
+            <button onClick={() => scrollToSection('testimonials')} className="text-foreground/80 hover:text-accent transition-colors text-left">
+              Testimonials
             </button>
             <button onClick={() => scrollToSection('contact')} className="text-foreground/80 hover:text-accent transition-colors text-left">
               Contact

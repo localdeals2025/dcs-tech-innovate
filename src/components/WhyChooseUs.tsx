@@ -5,22 +5,26 @@ const reasons = [
   {
     icon: Award,
     title: "Proven Expertise",
-    description: "Years of experience delivering successful projects across diverse industries and technologies."
+    description: "Years of experience delivering successful projects across diverse industries and technologies.",
+    metric: "500+ Projects",
   },
   {
     icon: Users,
     title: "Client-Centric Approach",
-    description: "We prioritize your business goals and work collaboratively to ensure your success."
+    description: "We prioritize your business goals and work collaboratively to ensure your success.",
+    metric: "98% Satisfaction",
   },
   {
     icon: Zap,
     title: "Cutting-Edge Innovation",
-    description: "Stay ahead with the latest technologies, methodologies, and industry best practices."
+    description: "Stay ahead with the latest technologies, methodologies, and industry best practices.",
+    metric: "Latest Tech Stack",
   },
   {
     icon: CheckCircle2,
     title: "End-to-End Support",
-    description: "From consultation to implementation and ongoing support, we're with you every step."
+    description: "From consultation to implementation and ongoing support, we're with you every step.",
+    metric: "24/7 Available",
   }
 ];
 
@@ -54,12 +58,15 @@ const WhyChooseUs = () => {
                 <div className="mb-6 inline-flex p-4 rounded-full bg-gradient-to-br from-accent/20 to-primary/20 group-hover:from-accent/30 group-hover:to-primary/30 transition-all">
                   <reason.icon className="h-8 w-8 text-accent" />
                 </div>
-                <h3 className="text-xl font-bold mb-4 group-hover:text-accent transition-colors">
+                <h3 className="text-xl font-bold mb-3 group-hover:text-accent transition-colors">
                   {reason.title}
                 </h3>
-                <p className="text-muted-foreground leading-relaxed">
+                <p className="text-muted-foreground leading-relaxed mb-4">
                   {reason.description}
                 </p>
+                <div className="pt-4 border-t border-border/50">
+                  <span className="text-accent font-semibold text-sm">{reason.metric}</span>
+                </div>
               </CardContent>
             </Card>
           ))}
