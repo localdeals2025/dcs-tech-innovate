@@ -70,9 +70,15 @@ const Services = () => {
                 <h3 className="text-2xl font-bold mb-4 group-hover:text-accent transition-colors">
                   {service.title}
                 </h3>
-                <p className="text-muted-foreground leading-relaxed">
+                <p className="text-muted-foreground leading-relaxed mb-4">
                   {service.description}
                 </p>
+                <button 
+                  onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+                  className="text-accent text-sm font-semibold hover:underline inline-flex items-center gap-1 group-hover:gap-2 transition-all"
+                >
+                  Learn More →
+                </button>
               </CardContent>
             </Card>
           ))}
