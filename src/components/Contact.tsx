@@ -187,90 +187,73 @@ const Contact = () => {
 
           <Card className="border-border/50 bg-card/50 backdrop-blur-sm overflow-hidden">
             <CardContent className="p-8">
-              <div className="grid lg:grid-cols-[2fr_1fr] gap-8">
-                {/* Left: World Map */}
-                <div className="relative w-full h-[400px] md:h-[500px] bg-gradient-to-br from-secondary/20 to-background rounded-xl overflow-hidden">
-                  {/* Dotted World Map Background Pattern */}
-                  <div 
-                    className="absolute inset-0 opacity-50"
-                    style={{
-                      backgroundImage: `radial-gradient(circle, hsl(var(--accent)) 1px, transparent 1px)`,
-                      backgroundSize: '20px 20px'
+              <div className="relative w-full h-[400px] md:h-[500px] bg-gradient-to-br from-secondary/20 to-background rounded-xl overflow-hidden">
+                {/* Dotted World Map Background Pattern */}
+                <div 
+                  className="absolute inset-0 opacity-20"
+                  style={{
+                    backgroundImage: `radial-gradient(circle, hsl(var(--accent)) 1px, transparent 1px)`,
+                    backgroundSize: '20px 20px'
+                  }}
+                />
+                
+                {/* Subtle continent shapes using dots */}
+                <svg className="absolute inset-0 w-full h-full opacity-10" viewBox="0 0 1000 600" preserveAspectRatio="xMidYMid slice">
+                  <defs>
+                    <pattern id="dots" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+                      <circle cx="2" cy="2" r="1.5" fill="currentColor" className="text-accent" />
+                    </pattern>
+                  </defs>
+                  {/* Simplified continent shapes */}
+                  <ellipse cx="200" cy="200" rx="150" ry="100" fill="url(#dots)" />
+                  <ellipse cx="500" cy="180" rx="120" ry="80" fill="url(#dots)" />
+                  <ellipse cx="700" cy="280" rx="180" ry="120" fill="url(#dots)" />
+                  <ellipse cx="850" cy="450" rx="100" ry="80" fill="url(#dots)" />
+                </svg>
+
+                {/* Location Markers */}
+                {[
+                  { name: "USA", x: "20%", y: "35%", label: "United States" },
+                  { name: "Canada", x: "22%", y: "25%", label: "Canada" },
+                  { name: "UK", x: "48%", y: "28%", label: "United Kingdom" },
+                  { name: "UAE", x: "62%", y: "45%", label: "United Arab Emirates" },
+                  { name: "India", x: "70%", y: "45%", label: "India", isHQ: true },
+                  { name: "Australia", x: "82%", y: "72%", label: "Australia" }
+                ].map((location, index) => (
+                  <div
+                    key={location.name}
+                    className="absolute group cursor-pointer"
+                    style={{ 
+                      left: location.x, 
+                      top: location.y,
+                      animation: `fade-in 0.6s ease-out ${index * 0.15}s both`
                     }}
-                  />
-                  
-                  {/* Subtle continent shapes using dots */}
-                  <svg className="absolute inset-0 w-full h-full opacity-30" viewBox="0 0 1000 600" preserveAspectRatio="xMidYMid slice">
-                    <defs>
-                      <pattern id="dots" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
-                        <circle cx="2" cy="2" r="1.5" fill="currentColor" className="text-accent" />
-                      </pattern>
-                    </defs>
-                    {/* Simplified continent shapes */}
-                    <ellipse cx="200" cy="200" rx="150" ry="100" fill="url(#dots)" />
-                    <ellipse cx="500" cy="180" rx="120" ry="80" fill="url(#dots)" />
-                    <ellipse cx="700" cy="280" rx="180" ry="120" fill="url(#dots)" />
-                    <ellipse cx="850" cy="450" rx="100" ry="80" fill="url(#dots)" />
-                  </svg>
-
-                  {/* Location Markers */}
-                  {[
-                    { name: "USA", x: "20%", y: "35%", label: "United States", flag: "🇺🇸" },
-                    { name: "Canada", x: "22%", y: "25%", label: "Canada", flag: "🇨🇦" },
-                    { name: "UK", x: "48%", y: "28%", label: "United Kingdom", flag: "🇬🇧" },
-                    { name: "UAE", x: "62%", y: "45%", label: "United Arab Emirates", flag: "🇦🇪" },
-                    { name: "India", x: "70%", y: "45%", label: "India", isHQ: true, flag: "🇮🇳" },
-                    { name: "Australia", x: "82%", y: "72%", label: "Australia", flag: "🇦🇺" }
-                  ].map((location, index) => (
-                    <div
-                      key={location.name}
-                      className="absolute"
-                      style={{ 
-                        left: location.x, 
-                        top: location.y,
-                        animation: `fade-in 0.6s ease-out ${index * 0.15}s both`
-                      }}
-                    >
-                      {/* Outer pulse ring */}
-                      <div className={`absolute inset-0 ${location.isHQ ? 'w-8 h-8 -left-4 -top-4' : 'w-6 h-6 -left-3 -top-3'} rounded-full bg-accent/20 animate-ping`} />
-                      
-                      {/* Marker dot */}
-                      <div className={`relative ${location.isHQ ? 'w-4 h-4' : 'w-3 h-3'} rounded-full bg-accent shadow-lg shadow-accent/50 border-2 border-background`}>
+                  >
+                    {/* Outer pulse ring */}
+                    <div className={`absolute inset-0 ${location.isHQ ? 'w-8 h-8 -left-4 -top-4' : 'w-6 h-6 -left-3 -top-3'} rounded-full bg-accent/20 animate-ping`} />
+                    
+                    {/* Marker dot */}
+                    <div className={`relative ${location.isHQ ? 'w-4 h-4' : 'w-3 h-3'} rounded-full bg-accent shadow-lg shadow-accent/50 border-2 border-background transition-transform group-hover:scale-125`}>
+                      {location.isHQ && (
+                        <div className="absolute -top-1 -right-1 w-2 h-2 rounded-full bg-primary animate-pulse" />
+                      )}
+                    </div>
+                    
+                    {/* Location label */}
+                    <div className="absolute left-1/2 -translate-x-1/2 top-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                      <div className="bg-card border border-border/50 px-3 py-1.5 rounded-lg shadow-lg backdrop-blur-sm whitespace-nowrap">
+                        <p className="text-sm font-semibold text-foreground">{location.label}</p>
                         {location.isHQ && (
-                          <div className="absolute -top-1 -right-1 w-2 h-2 rounded-full bg-primary animate-pulse" />
+                          <p className="text-xs text-accent">Headquarters</p>
                         )}
                       </div>
                     </div>
-                  ))}
-                </div>
-
-                {/* Right: Location Names */}
-                <div className="flex flex-col justify-center space-y-4">
-                  <h4 className="text-lg font-bold mb-2 text-foreground">Our Locations</h4>
-                  {[
-                    { name: "USA", flag: "🇺🇸", label: "United States" },
-                    { name: "Canada", flag: "🇨🇦", label: "Canada" },
-                    { name: "UK", flag: "🇬🇧", label: "United Kingdom" },
-                    { name: "UAE", flag: "🇦🇪", label: "United Arab Emirates" },
-                    { name: "India", flag: "🇮🇳", label: "India", isHQ: true },
-                    { name: "Australia", flag: "🇦🇺", label: "Australia" }
-                  ].map((location) => (
-                    <div key={location.name} className="flex items-center gap-3">
-                      <div className="flex-shrink-0 w-2 h-2 rounded-full bg-accent shadow-sm shadow-accent/50" />
-                      <span className="text-2xl">{location.flag}</span>
-                      <div className="flex items-center gap-2">
-                        <span className="text-sm font-medium text-foreground">{location.label}</span>
-                        {location.isHQ && (
-                          <span className="text-xs px-2 py-0.5 bg-accent/20 text-accent rounded-full font-semibold">HQ</span>
-                        )}
-                      </div>
-                    </div>
-                  ))}
-                </div>
+                  </div>
+                ))}
               </div>
 
-              {/* Location Legend - Mobile Only */}
-              <div className="grid grid-cols-2 md:grid-cols-6 gap-3 mt-6 lg:hidden">
+              {/* Location Legend */}
+              <div className="grid grid-cols-2 md:grid-cols-6 gap-3 mt-6">
                 {[
                   { name: "USA", flag: "🇺🇸" },
                   { name: "Canada", flag: "🇨🇦" },
