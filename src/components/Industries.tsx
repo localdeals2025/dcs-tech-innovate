@@ -2,6 +2,10 @@ import { Heart, DollarSign, ShoppingCart, Factory, GraduationCap, Cpu } from "lu
 import { Card, CardContent } from "@/components/ui/card";
 import healthcareImage from "@/assets/healthcare-tech.jpg";
 import financeImage from "@/assets/finance-platform.jpg";
+import ecommerceImage from "@/assets/ecommerce-industry.jpg";
+import manufacturingImage from "@/assets/manufacturing-industry.jpg";
+import educationImage from "@/assets/education-industry.jpg";
+import technologyImage from "@/assets/technology-industry.jpg";
 
 const Industries = () => {
   const industries = [
@@ -23,24 +27,28 @@ const Industries = () => {
       icon: ShoppingCart,
       title: "E-commerce",
       description: "Scalable platforms for online retail, marketplaces, and digital commerce",
+      image: ecommerceImage,
       solutions: ["Custom Storefronts", "Inventory Management", "Payment Integration"],
     },
     {
       icon: Factory,
       title: "Manufacturing",
       description: "IoT and automation solutions for production optimization and supply chain",
+      image: manufacturingImage,
       solutions: ["IoT Integration", "ERP Systems", "Supply Chain Tools"],
     },
     {
       icon: GraduationCap,
       title: "Education",
       description: "Learning management systems and educational technology platforms",
+      image: educationImage,
       solutions: ["LMS Platforms", "Virtual Classrooms", "Student Analytics"],
     },
     {
       icon: Cpu,
       title: "Technology",
       description: "Advanced software solutions for tech companies and startups",
+      image: technologyImage,
       solutions: ["SaaS Products", "API Development", "Cloud Migration"],
     },
   ];

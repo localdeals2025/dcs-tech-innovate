@@ -133,9 +133,8 @@ const Contact = () => {
                   </div>
                 </div>
                 <div>
-                  <h3 className="text-lg font-bold mb-2">Email Us</h3>
-                  <p className="text-muted-foreground">info@dcs-tech.com</p>
-                  <p className="text-muted-foreground">sales@dcs-tech.com</p>
+                  <h3 className="text-lg font-bold mb-2">Email</h3>
+                  <p className="text-muted-foreground">info@dcstechhub.com</p>
                 </div>
               </CardContent>
             </Card>
@@ -148,9 +147,9 @@ const Contact = () => {
                   </div>
                 </div>
                 <div>
-                  <h3 className="text-lg font-bold mb-2">Call Us</h3>
-                  <p className="text-muted-foreground">+1 (555) 123-4567</p>
-                  <p className="text-muted-foreground">Mon-Fri 9am-6pm EST</p>
+                  <h3 className="text-lg font-bold mb-2">Phone</h3>
+                  <p className="text-muted-foreground">+91 799 3077 132</p>
+                  <p className="text-muted-foreground">Mon-Fri 9am-6pm IST</p>
                 </div>
               </CardContent>
             </Card>
@@ -163,9 +162,9 @@ const Contact = () => {
                   </div>
                 </div>
                 <div>
-                  <h3 className="text-lg font-bold mb-2">Visit Us</h3>
-                  <p className="text-muted-foreground">123 Technology Drive</p>
-                  <p className="text-muted-foreground">San Francisco, CA 94105</p>
+                  <h3 className="text-lg font-bold mb-2">Address</h3>
+                  <p className="text-muted-foreground">T-Hub 2.0, HITECH City</p>
+                  <p className="text-muted-foreground">Hyderabad 500032, IN</p>
                 </div>
               </CardContent>
             </Card>

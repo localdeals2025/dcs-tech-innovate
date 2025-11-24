@@ -3,29 +3,6 @@ import { Card, CardContent } from "@/components/ui/card";
 import securityImage from "@/assets/security-shield.jpg";
 
 const SecurityCompliance = () => {
-  const certifications = [
-    {
-      icon: Shield,
-      title: "ISO 27001 Certified",
-      description: "International standard for information security management",
-    },
-    {
-      icon: Lock,
-      title: "SOC 2 Type II",
-      description: "Audited security, availability, and confidentiality controls",
-    },
-    {
-      icon: FileCheck,
-      title: "GDPR Compliant",
-      description: "Full compliance with European data protection regulations",
-    },
-    {
-      icon: AlertCircle,
-      title: "HIPAA Ready",
-      description: "Healthcare compliance for protected health information",
-    },
-  ];
-
   const securityFeatures = [
     "End-to-end encryption for data in transit and at rest",
     "Regular security audits and penetration testing",
@@ -74,24 +51,6 @@ const SecurityCompliance = () => {
               implements proactive measures to protect your applications and data.
             </p>
           </div>
-        </div>
-
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-          {certifications.map((cert, index) => (
-            <Card
-              key={index}
-              className="group hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border-border/50 text-center"
-              style={{ animationDelay: `${index * 100}ms` }}
-            >
-              <CardContent className="p-6">
-                <div className="w-16 h-16 rounded-full bg-gradient-to-br from-accent/20 to-accent/5 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <cert.icon className="w-8 h-8 text-accent" />
-                </div>
-                <h4 className="font-semibold mb-2">{cert.title}</h4>
-                <p className="text-sm text-muted-foreground">{cert.description}</p>
-              </CardContent>
-            </Card>
-          ))}
         </div>
 
         <Card className="border-border/50">

@@ -4,35 +4,27 @@ import { Card, CardContent } from "@/components/ui/card";
 const Testimonials = () => {
   const testimonials = [
     {
-      quote: "DCS transformed our outdated systems into a modern, scalable platform. Their team's expertise in cloud architecture was exactly what we needed. The project was delivered on time and exceeded our expectations.",
-      author: "Sarah Johnson",
-      role: "CTO",
-      company: "TechVentures Inc.",
-      industry: "Technology",
+      quote: "DCS transformed our digital presence with cutting-edge solutions. Their expertise in web development and AI integration helped us achieve remarkable growth. The team's dedication and professionalism exceeded all expectations.",
+      author: "Vinay Muthyala",
+      role: "Director",
+      company: "Farehmosaic",
+      industry: "Hungary",
       rating: 5,
     },
     {
-      quote: "Working with DCS on our healthcare platform was a game-changer. They understood our compliance requirements and built a HIPAA-compliant solution that our medical staff loves. Highly recommend their services.",
-      author: "Dr. Michael Chen",
-      role: "Director of IT",
-      company: "HealthFirst Medical Group",
-      industry: "Healthcare",
+      quote: "Working with DCS on our healthcare platform was exceptional. They delivered a robust, secure system that streamlined our operations and improved patient care. Their understanding of healthcare technology is outstanding.",
+      author: "Suman G",
+      role: "MD",
+      company: "Life Care Hospitals",
+      industry: "Hyderabad",
       rating: 5,
     },
     {
-      quote: "The AI-powered analytics dashboard DCS built for us has revolutionized our decision-making process. We can now identify trends and opportunities in real-time. Their data science team is top-notch.",
-      author: "Emily Rodriguez",
-      role: "VP of Operations",
-      company: "Global Retailers Corp",
-      industry: "E-commerce",
-      rating: 5,
-    },
-    {
-      quote: "From initial consultation to post-launch support, DCS demonstrated professionalism and technical excellence. They didn't just code—they became true partners in our digital transformation journey.",
-      author: "James Williams",
-      role: "CEO",
-      company: "Financial Solutions Ltd",
-      industry: "Finance",
+      quote: "DCS built us a powerful content management platform that revolutionized our news delivery. Their technical expertise and timely delivery made them an invaluable partner in our digital transformation.",
+      author: "Sravan Kumar Bommakanti",
+      role: "Editor",
+      company: "Rushi News Daily",
+      industry: "Telangana",
       rating: 5,
     },
   ];
@@ -51,7 +43,7 @@ const Testimonials = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
             <Card
               key={index}
