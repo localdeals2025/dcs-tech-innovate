@@ -190,9 +190,9 @@ const Contact = () => {
               <div className="relative w-full h-[400px] md:h-[500px] bg-gradient-to-br from-secondary/20 to-background rounded-xl overflow-hidden">
                 
                 {/* Professional world map outline */}
-                <img 
-                  src="/src/assets/world-map-dotted.svg"
-                  alt="World Map"
+              <img 
+                src="https://stridefuture.com/wp-content/uploads/map-new.svg"
+                alt="World Map"
                   className="absolute inset-0 w-full h-full object-contain opacity-60"
                 />
 
