@@ -56,7 +56,7 @@ const TeamExpertise = () => {
             </p>
             <p className="text-muted-foreground leading-relaxed">
               What sets us apart is our commitment to understanding your business first. Technology is our tool, 
-              but your success is our mission. We don't just build software—we craft solutions that drive growth, 
+              but your success is our mission. We don't just build software - we craft solutions that drive growth, 
               improve efficiency, and create lasting value.
             </p>
 
