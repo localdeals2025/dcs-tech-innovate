@@ -204,11 +204,49 @@ const Contact = () => {
                       <circle cx="2" cy="2" r="2" fill="currentColor" className="text-accent" />
                     </pattern>
                   </defs>
-                  {/* Simplified continent shapes */}
-                  <ellipse cx="200" cy="200" rx="150" ry="100" fill="url(#dots)" />
-                  <ellipse cx="500" cy="180" rx="120" ry="80" fill="url(#dots)" />
-                  <ellipse cx="700" cy="280" rx="180" ry="120" fill="url(#dots)" />
-                  <ellipse cx="850" cy="450" rx="100" ry="80" fill="url(#dots)" />
+                  {/* Realistic continent shapes using dotted pattern */}
+                  
+                  {/* North America */}
+                  <path 
+                    d="M 100,140 Q 120,100 160,90 L 200,85 Q 240,90 270,100 L 290,120 Q 300,150 295,180 L 290,220 Q 285,250 270,270 L 250,290 Q 230,310 200,320 L 170,330 Q 140,340 120,350 L 100,360 Q 85,350 80,320 L 75,280 Q 70,240 75,200 L 80,160 Q 85,140 100,140 Z"
+                    fill="url(#dots)"
+                    className="continent"
+                  />
+                  
+                  {/* South America */}
+                  <path 
+                    d="M 240,350 L 260,360 Q 280,370 290,390 L 300,420 Q 305,460 300,490 L 290,520 Q 280,540 260,550 L 230,560 Q 210,555 200,540 L 190,510 Q 185,480 190,450 L 200,410 Q 210,380 230,360 L 240,350 Z"
+                    fill="url(#dots)"
+                    className="continent"
+                  />
+                  
+                  {/* Europe */}
+                  <path 
+                    d="M 430,120 L 460,110 Q 490,105 520,110 L 550,125 Q 560,145 555,170 L 545,200 Q 535,220 515,230 L 485,235 Q 460,232 440,220 L 425,200 Q 418,180 420,160 L 425,135 Q 428,120 430,120 Z"
+                    fill="url(#dots)"
+                    className="continent"
+                  />
+                  
+                  {/* Africa */}
+                  <path 
+                    d="M 470,240 L 500,245 Q 530,250 550,265 L 565,290 Q 575,320 570,350 L 560,390 Q 550,425 530,445 L 505,460 Q 480,465 460,455 L 440,440 Q 425,415 425,385 L 430,350 Q 435,315 445,285 L 455,260 Q 462,245 470,240 Z"
+                    fill="url(#dots)"
+                    className="continent"
+                  />
+                  
+                  {/* Asia */}
+                  <path 
+                    d="M 560,100 L 600,90 Q 640,85 680,90 L 720,100 Q 760,110 790,125 L 820,145 Q 845,170 850,200 L 855,240 Q 858,280 850,315 L 835,350 Q 815,380 785,395 L 750,405 Q 710,408 675,400 L 640,385 Q 610,365 595,335 L 585,300 Q 580,260 585,220 L 595,180 Q 605,150 625,130 L 645,115 Q 660,105 680,100 L 700,95 Q 720,92 740,95 M 560,140 Q 565,165 570,190 L 575,220 Q 578,245 580,270"
+                    fill="url(#dots)"
+                    className="continent"
+                  />
+                  
+                  {/* Australia */}
+                  <path 
+                    d="M 760,420 L 790,415 Q 820,418 845,430 L 870,450 Q 885,475 880,500 L 865,520 Q 845,535 820,535 L 790,530 Q 765,520 750,500 L 740,475 Q 738,450 745,430 L 755,420 Q 760,418 760,420 Z"
+                    fill="url(#dots)"
+                    className="continent"
+                  />
                 </svg>
 
                 {/* Location Markers */}
