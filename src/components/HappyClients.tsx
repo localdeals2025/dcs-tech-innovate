@@ -2,14 +2,16 @@ import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carouse
 import Autoplay from "embla-carousel-autoplay";
 
 const clients = [
-  { name: "Farehmosaic", logo: "FM" },
-  { name: "Life Care Hospitals", logo: "LCH" },
-  { name: "Rushi News Daily", logo: "RND" },
-  { name: "TechVentures Inc", logo: "TVI" },
-  { name: "Global Retailers", logo: "GR" },
-  { name: "Financial Solutions", logo: "FS" },
-  { name: "Innovation Labs", logo: "IL" },
-  { name: "Digital Systems", logo: "DS" },
+  { name: "KB Tech", logo: "https://stridefuture.com/wp-content/uploads/KB-Tech-1.png" },
+  { name: "Client 2", logo: "https://stridefuture.com/wp-content/uploads/image-38.png" },
+  { name: "Client 3", logo: "https://stridefuture.com/wp-content/uploads/image-41.png" },
+  { name: "Maktech", logo: "https://stridefuture.com/wp-content/uploads/Maktech-2.png" },
+  { name: "GERP", logo: "https://stridefuture.com/wp-content/uploads/GERP-1.png" },
+  { name: "Convoltech", logo: "https://stridefuture.com/wp-content/uploads/correct-convoltech-2.webp" },
+  { name: "Client 7", logo: "https://stridefuture.com/wp-content/uploads/image-39.png" },
+  { name: "Client 8", logo: "https://stridefuture.com/wp-content/uploads/image-44.png" },
+  { name: "Technocare", logo: "https://stridefuture.com/wp-content/uploads/technocare-1.webp" },
+  { name: "Ensoft Pro", logo: "https://stridefuture.com/wp-content/uploads/Ensoft-Pro.webp" },
 ];
 
 const HappyClients = () => {
@@ -43,10 +45,11 @@ const HappyClients = () => {
             {clients.map((client, index) => (
               <CarouselItem key={index} className="pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4">
                 <div className="flex items-center justify-center p-8 bg-card rounded-lg border border-border/50 hover:border-accent/30 transition-all h-32">
-                  <div className="text-center">
-                    <div className="text-4xl font-bold text-accent mb-2">{client.logo}</div>
-                    <p className="text-sm text-muted-foreground font-medium">{client.name}</p>
-                  </div>
+                  <img 
+                    src={client.logo} 
+                    alt={client.name}
+                    className="max-h-20 max-w-full object-contain filter grayscale hover:grayscale-0 transition-all duration-300"
+                  />
                 </div>
               </CarouselItem>
             ))}

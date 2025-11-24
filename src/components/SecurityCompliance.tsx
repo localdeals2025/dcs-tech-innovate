@@ -41,7 +41,7 @@ const SecurityCompliance = () => {
           <div className="space-y-6">
             <h3 className="text-3xl font-bold">Your Data Security is Our Priority</h3>
             <p className="text-muted-foreground leading-relaxed">
-              We understand that security isn't optional—it's fundamental. That's why we've built 
+              We understand that security isn't optional - it's fundamental. That's why we've built 
               our entire infrastructure and development processes around industry-leading security 
               practices and compliance standards.
             </p>

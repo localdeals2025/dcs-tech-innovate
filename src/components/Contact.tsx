@@ -198,12 +198,12 @@ const Contact = () => {
 
                 {/* Location Markers */}
                 {[
-                  { name: "USA", x: "18%", y: "38%", label: "United States" },
-                  { name: "Canada", x: "19%", y: "28%", label: "Canada" },
-                  { name: "UK", x: "50%", y: "32%", label: "United Kingdom" },
-                  { name: "UAE", x: "65%", y: "44%", label: "United Arab Emirates" },
-                  { name: "India", x: "72%", y: "46%", label: "India", isHQ: true },
-                  { name: "Australia", x: "83%", y: "73%", label: "Australia" }
+                  { name: "USA", x: "22%", y: "42%", label: "United States" },
+                  { name: "Canada", x: "20%", y: "32%", label: "Canada" },
+                  { name: "UK", x: "49%", y: "35%", label: "United Kingdom" },
+                  { name: "UAE", x: "60%", y: "46%", label: "United Arab Emirates" },
+                  { name: "India", x: "68%", y: "48%", label: "India", isHQ: true },
+                  { name: "Australia", x: "80%", y: "70%", label: "Australia" }
                 ].map((location, index) => (
                   <div
                     key={location.name}

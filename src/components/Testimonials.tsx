@@ -39,7 +39,7 @@ const Testimonials = () => {
             What Our <span className="text-accent">Clients Say</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Don't just take our word for it—hear from businesses that have transformed with DCS
+            Don't just take our word for it - hear from businesses that have transformed with DCS
           </p>
         </div>
 
