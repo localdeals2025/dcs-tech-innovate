@@ -190,10 +190,10 @@ const Contact = () => {
               <div className="relative w-full h-[400px] md:h-[500px] bg-gradient-to-br from-secondary/20 to-background rounded-xl overflow-hidden">
                 
                 {/* Subtle continent shapes using dots */}
-                <svg className="absolute inset-0 w-full h-full opacity-35" viewBox="0 0 1000 600" preserveAspectRatio="xMidYMid slice">
+                <svg className="absolute inset-0 w-full h-full opacity-70" viewBox="0 0 1000 600" preserveAspectRatio="xMidYMid slice">
                   <defs>
-                    <pattern id="dots" x="0" y="0" width="12" height="12" patternUnits="userSpaceOnUse">
-                      <circle cx="1.5" cy="1.5" r="1.5" fill="currentColor" className="text-accent" />
+                    <pattern id="dots" x="0" y="0" width="6" height="6" patternUnits="userSpaceOnUse">
+                      <circle cx="3" cy="3" r="2" fill="currentColor" className="text-accent" />
                     </pattern>
                   </defs>
                   {/* Realistic continent shapes using dotted pattern */}
