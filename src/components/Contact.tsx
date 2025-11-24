@@ -190,18 +190,18 @@ const Contact = () => {
               <div className="relative w-full h-[400px] md:h-[500px] bg-gradient-to-br from-secondary/20 to-background rounded-xl overflow-hidden">
                 {/* Dotted World Map Background Pattern */}
                 <div 
-                  className="absolute inset-0 opacity-20"
+                  className="absolute inset-0 opacity-50"
                   style={{
-                    backgroundImage: `radial-gradient(circle, hsl(var(--accent)) 1px, transparent 1px)`,
+                    backgroundImage: `radial-gradient(circle, hsl(var(--accent)) 1.5px, transparent 1.5px)`,
                     backgroundSize: '20px 20px'
                   }}
                 />
                 
                 {/* Subtle continent shapes using dots */}
-                <svg className="absolute inset-0 w-full h-full opacity-10" viewBox="0 0 1000 600" preserveAspectRatio="xMidYMid slice">
+                <svg className="absolute inset-0 w-full h-full opacity-35" viewBox="0 0 1000 600" preserveAspectRatio="xMidYMid slice">
                   <defs>
                     <pattern id="dots" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
-                      <circle cx="2" cy="2" r="1.5" fill="currentColor" className="text-accent" />
+                      <circle cx="2" cy="2" r="2" fill="currentColor" className="text-accent" />
                     </pattern>
                   </defs>
                   {/* Simplified continent shapes */}
@@ -241,8 +241,8 @@ const Contact = () => {
                     
                     {/* Location label */}
                     <div className="absolute left-1/2 -translate-x-1/2 top-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-                      <div className="bg-card border border-border/50 px-3 py-1.5 rounded-lg shadow-lg backdrop-blur-sm whitespace-nowrap">
-                        <p className="text-sm font-semibold text-foreground">{location.label}</p>
+                      <div className="bg-card border border-border/50 px-2 py-1 rounded-lg shadow-lg backdrop-blur-sm whitespace-nowrap">
+                        <p className="text-xs font-semibold text-foreground">{location.label}</p>
                         {location.isHQ && (
                           <p className="text-xs text-accent">Headquarters</p>
                         )}
