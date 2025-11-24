@@ -1,36 +1,48 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { MessageSquare, Sparkles, BarChart3, Shield, Cloud, Code } from "lucide-react";
+import itConsultingImg from "@/assets/it-consulting-service.jpg";
+import aiServiceImg from "@/assets/ai-service.jpg";
+import dataAnalyticsImg from "@/assets/data-analytics-service.jpg";
+import cybersecurityImg from "@/assets/cybersecurity-service.jpg";
+import cloudServiceImg from "@/assets/cloud-service.jpg";
+import softwareDevImg from "@/assets/software-dev-service.jpg";
 
 const services = [
   {
     icon: MessageSquare,
     title: "IT Consulting",
-    description: "Expert guidance to optimize your technology stack, streamline operations, and make strategic technology decisions that drive business growth."
+    description: "Expert guidance to optimize your technology stack, streamline operations, and make strategic technology decisions that drive business growth.",
+    image: itConsultingImg
   },
   {
     icon: Sparkles,
     title: "Generative AI Solutions",
-    description: "Harness the power of AI to automate workflows, enhance creativity, and unlock new business value through intelligent systems."
+    description: "Harness the power of AI to automate workflows, enhance creativity, and unlock new business value through intelligent systems.",
+    image: aiServiceImg
   },
   {
     icon: BarChart3,
     title: "Data Analytics",
-    description: "Transform raw data into actionable insights with advanced analytics, visualization, and business intelligence solutions."
+    description: "Transform raw data into actionable insights with advanced analytics, visualization, and business intelligence solutions.",
+    image: dataAnalyticsImg
   },
   {
     icon: Shield,
     title: "Cybersecurity",
-    description: "Comprehensive security solutions to protect your systems, data, and digital infrastructure from evolving threats."
+    description: "Comprehensive security solutions to protect your systems, data, and digital infrastructure from evolving threats.",
+    image: cybersecurityImg
   },
   {
     icon: Cloud,
     title: "Cloud Solutions",
-    description: "Expert cloud setup, migration, and optimization services to enhance scalability, reduce costs, and improve performance."
+    description: "Expert cloud setup, migration, and optimization services to enhance scalability, reduce costs, and improve performance.",
+    image: cloudServiceImg
   },
   {
     icon: Code,
     title: "Custom Software Development",
-    description: "Bespoke applications tailored to your exact requirements, built with cutting-edge technologies and best practices."
+    description: "Bespoke applications tailored to your exact requirements, built with cutting-edge technologies and best practices.",
+    image: softwareDevImg
   }
 ];
 
@@ -60,19 +72,34 @@ const Services = () => {
           {services.map((service, index) => (
             <Card 
               key={index}
-              className="group hover:shadow-lg transition-all duration-300 border-border/50 bg-card/50 backdrop-blur-sm hover:scale-105"
+              className="group hover:shadow-xl transition-all duration-300 border-border/50 bg-card/50 backdrop-blur-sm hover:scale-105 overflow-hidden"
               style={{ animationDelay: `${index * 100}ms` }}
             >
-              <CardContent className="p-8">
-                <div className="mb-6 inline-flex p-4 rounded-2xl bg-gradient-to-br from-accent/20 to-primary/20 group-hover:from-accent/30 group-hover:to-primary/30 transition-all">
-                  <service.icon className="h-8 w-8 text-accent" />
+              {/* Background Image Header */}
+              <div className="relative h-48 overflow-hidden">
+                <img 
+                  src={service.image} 
+                  alt={service.title}
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                />
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-card" />
+              </div>
+
+              <CardContent className="p-8 pt-4">
+                {/* Icon + Title */}
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="inline-flex p-3 rounded-xl bg-gradient-to-br from-accent/20 to-primary/20 group-hover:from-accent/30 group-hover:to-primary/30 transition-all">
+                    <service.icon className="h-6 w-6 text-accent" />
+                  </div>
+                  <h3 className="text-xl font-bold group-hover:text-accent transition-colors">
+                    {service.title}
+                  </h3>
                 </div>
-                <h3 className="text-2xl font-bold mb-4 group-hover:text-accent transition-colors">
-                  {service.title}
-                </h3>
+
                 <p className="text-muted-foreground leading-relaxed mb-4">
                   {service.description}
                 </p>
+
                 <button 
                   onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
                   className="text-accent text-sm font-semibold hover:underline inline-flex items-center gap-1 group-hover:gap-2 transition-all"

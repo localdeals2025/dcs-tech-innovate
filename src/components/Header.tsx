@@ -26,9 +26,6 @@ const Header = () => {
             <button onClick={() => scrollToSection('services')} className="text-foreground/80 hover:text-accent transition-colors text-sm font-medium">
               Services
             </button>
-            <button onClick={() => scrollToSection('technologies')} className="text-foreground/80 hover:text-accent transition-colors text-sm font-medium">
-              Technologies
-            </button>
             <button onClick={() => scrollToSection('industries')} className="text-foreground/80 hover:text-accent transition-colors text-sm font-medium">
               Industries
             </button>
@@ -57,9 +54,6 @@ const Header = () => {
           <div className="md:hidden mt-4 pb-4 flex flex-col gap-4">
             <button onClick={() => scrollToSection('services')} className="text-foreground/80 hover:text-accent transition-colors text-left">
               Services
-            </button>
-            <button onClick={() => scrollToSection('technologies')} className="text-foreground/80 hover:text-accent transition-colors text-left">
-              Technologies
             </button>
             <button onClick={() => scrollToSection('industries')} className="text-foreground/80 hover:text-accent transition-colors text-left">
               Industries

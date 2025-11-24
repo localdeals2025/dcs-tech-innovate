@@ -50,7 +50,7 @@ const TeamExpertise = () => {
           <div className="space-y-6">
             <h3 className="text-3xl font-bold">Building Tomorrow's Solutions Today</h3>
             <p className="text-muted-foreground leading-relaxed">
-              Founded in 2009, DCS has grown from a small consulting firm to a full-service technology partner 
+              Founded in 2019, DCS has grown from a small consulting firm to a full-service technology partner 
               trusted by businesses worldwide. Our team of 50+ experts brings together decades of combined 
               experience in software development, cloud architecture, artificial intelligence, and cybersecurity.
             </p>
@@ -66,7 +66,7 @@ const TeamExpertise = () => {
                 <div className="text-sm text-muted-foreground">Expert Team Members</div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-accent mb-1">15+</div>
+                <div className="text-3xl font-bold text-accent mb-1">7+</div>
                 <div className="text-sm text-muted-foreground">Years Experience</div>
               </div>
               <div>
