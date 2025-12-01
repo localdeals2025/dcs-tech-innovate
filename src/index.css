@@ -20,13 +20,13 @@ All colors MUST be HSL.
     --primary: 27 89% 54%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 27 30% 96%;
-    --secondary-foreground: 27 89% 54%;
+    --secondary: 4 25% 96%;
+    --secondary-foreground: 4 69% 53%;
 
     --muted: 210 30% 96%;
     --muted-foreground: 215 15% 50%;
 
-    --accent: 209 75% 34%;
+    --accent: 4 69% 53%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 4 69% 53%;
@@ -48,16 +48,16 @@ All colors MUST be HSL.
     --brand-red: 4 69% 53%;
 
     /* Custom design tokens */
-    --gradient-primary: linear-gradient(135deg, hsl(27, 89%, 54%) 0%, hsl(46, 90%, 55%) 100%);
-    --gradient-accent: linear-gradient(135deg, hsl(27, 89%, 54%) 0%, hsl(209, 75%, 34%) 100%);
+    --gradient-primary: linear-gradient(135deg, hsl(27, 89%, 54%) 0%, hsl(4, 69%, 53%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(27, 89%, 54%) 0%, hsl(76, 63%, 51%) 100%);
     --gradient-mesh: radial-gradient(at 20% 30%, hsla(27, 89%, 54%, 0.15) 0px, transparent 50%),
-                     radial-gradient(at 80% 70%, hsla(46, 90%, 55%, 0.12) 0px, transparent 50%),
-                     radial-gradient(at 40% 80%, hsla(209, 75%, 34%, 0.1) 0px, transparent 50%);
+                     radial-gradient(at 80% 70%, hsla(4, 69%, 53%, 0.12) 0px, transparent 50%),
+                     radial-gradient(at 40% 80%, hsla(76, 63%, 51%, 0.1) 0px, transparent 50%);
     
     --shadow-sm: 0 2px 8px -2px hsla(27, 89%, 54%, 0.08);
     --shadow-md: 0 8px 24px -4px hsla(27, 89%, 54%, 0.12);
     --shadow-lg: 0 16px 48px -8px hsla(27, 89%, 54%, 0.16);
-    --shadow-accent: 0 8px 32px -8px hsla(27, 89%, 54%, 0.3);
+    --shadow-accent: 0 8px 32px -8px hsla(4, 69%, 53%, 0.3);
 
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
@@ -76,13 +76,13 @@ All colors MUST be HSL.
     --primary-foreground: 27 89% 10%;
 
     --secondary: 215 25% 18%;
-    --secondary-foreground: 27 89% 58%;
+    --secondary-foreground: 4 69% 58%;
 
     --muted: 215 25% 18%;
     --muted-foreground: 215 15% 65%;
 
-    --accent: 209 75% 55%;
-    --accent-foreground: 209 75% 10%;
+    --accent: 4 69% 58%;
+    --accent-foreground: 4 69% 10%;
 
     --destructive: 4 69% 58%;
     --destructive-foreground: 210 20% 95%;
@@ -91,16 +91,16 @@ All colors MUST be HSL.
     --input: 215 25% 20%;
     --ring: 27 89% 58%;
 
-    --gradient-primary: linear-gradient(135deg, hsl(27, 89%, 45%) 0%, hsl(46, 90%, 50%) 100%);
-    --gradient-accent: linear-gradient(135deg, hsl(27, 89%, 58%) 0%, hsl(209, 75%, 45%) 100%);
+    --gradient-primary: linear-gradient(135deg, hsl(27, 89%, 45%) 0%, hsl(4, 69%, 45%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(27, 89%, 58%) 0%, hsl(76, 63%, 45%) 100%);
     --gradient-mesh: radial-gradient(at 20% 30%, hsla(27, 89%, 54%, 0.08) 0px, transparent 50%),
-                     radial-gradient(at 80% 70%, hsla(46, 90%, 55%, 0.12) 0px, transparent 50%),
-                     radial-gradient(at 40% 80%, hsla(209, 75%, 34%, 0.06) 0px, transparent 50%);
+                     radial-gradient(at 80% 70%, hsla(4, 69%, 53%, 0.1) 0px, transparent 50%),
+                     radial-gradient(at 40% 80%, hsla(76, 63%, 51%, 0.06) 0px, transparent 50%);
     
     --shadow-sm: 0 2px 8px -2px hsla(0, 0%, 0%, 0.3);
     --shadow-md: 0 8px 24px -4px hsla(0, 0%, 0%, 0.4);
     --shadow-lg: 0 16px 48px -8px hsla(0, 0%, 0%, 0.5);
-    --shadow-accent: 0 8px 32px -8px hsla(27, 89%, 58%, 0.4);
+    --shadow-accent: 0 8px 32px -8px hsla(4, 69%, 58%, 0.4);
   }
 }
 
